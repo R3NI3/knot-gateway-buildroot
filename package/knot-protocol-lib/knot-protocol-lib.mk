@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-KNOT_PROTOCOL_LIB_VERSION = KNOT-v01.00
+KNOT_PROTOCOL_LIB_VERSION = master
 KNOT_PROTOCOL_LIB_SITE = https://github.com/CESARBR/knot-protocol-source.git
 KNOT_PROTOCOL_LIB_SITE_METHOD = git
 KNOT_PROTOCOL_LIB_INSTALL_STAGING = YES
@@ -13,7 +13,7 @@ KNOT_SERVICE_APP_AUTORECONF = YES
 KNOT_SERVICE_APP_CONF_OPTS = --enable-maintainer-mode --enable-debug --sysconfdir=/etc
 
 define KNOT_PROTOCOL_LIB_BOOTSTRAP
-	cd $(@D) &&  ./bootstrap 
+	cd $(@D) &&  ./bootstrap
 endef
 
 KNOT_PROTOCOL_LIB_POST_PATCH_HOOKS += KNOT_PROTOCOL_LIB_BOOTSTRAP
